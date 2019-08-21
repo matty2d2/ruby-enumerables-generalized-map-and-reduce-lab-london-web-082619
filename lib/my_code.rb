@@ -11,8 +11,9 @@ def reduce(source_array, starting_point = 0)
   source_array.each do |x|
     if i == false
       return false
+    else
+      i = yield(i,x)
     end
-    i = yield(i,x)
   end
   i
 end
