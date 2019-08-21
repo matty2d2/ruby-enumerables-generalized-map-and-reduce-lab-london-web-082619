@@ -9,7 +9,7 @@ end
 def reduce(source_array, starting_point = 0)
    i = starting_point
   source_array.each do |x|
-    if !!i == false
+    if yield(i,x) == 0
       return false
     else
       i = yield(i,x)
