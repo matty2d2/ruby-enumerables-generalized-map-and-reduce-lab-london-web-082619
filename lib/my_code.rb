@@ -6,7 +6,7 @@ def map(source_array)
   new_Array
 end
 
-def reduce(source_array, starting_point = 0)  ##ATTENTION## this is probably a bit wrong
+def reduce(source_array, starting_point = 0) ##ATTENTION## it passes the tests, but probably wrong
    i = starting_point
   source_array.each do |x|
     if yield(i,x) == 0
